@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+    header("location: login.php");
+    exit;
+}
+
 require 'functions.php';
 $mahasiswa = query("SELECT * FROM mahasiswa");
 
@@ -14,8 +21,14 @@ if( isset($_POST["cari"]) ) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    
 </head>
+
 <body>
+
+    <a href="logout.php">Logut</a>
 
     <h1>Daftar Mahasiswa</h1>
 
@@ -26,6 +39,8 @@ if( isset($_POST["cari"]) ) {
 
     <input type="text" name="keyword" size="30" autofocus placeholder="Masukkan Keyword Pencarian.." autocomplete="off" id="keyword">
     <button type="submit" name="cari" id="tombol-cari">Cari!</button>
+
+    <img src="img/loader.gif" class="loader">
 
     </form>
     
@@ -60,11 +75,11 @@ if( isset($_POST["cari"]) ) {
     <?php $i++; ?>
     <?php endforeach; ?>
     </table>
-
-    <script src="js/script.js"></script>
     
+  
 </div>
-    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
