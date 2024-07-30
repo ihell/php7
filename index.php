@@ -28,14 +28,14 @@ if( isset($_POST["cari"]) ) {
 
 <body>
 
-    <a href="logout.php">Logut</a>
+    <a href="logout.php" class="logout">Logut</a>
 
     <h1>Daftar Mahasiswa</h1>
 
-    <a href="tambah.php">Tambah Data Mahasiswa</a>
+    <a href="tambah.php" class="tambah">Tambah Data Mahasiswa</a>
     <br><br> 
 
-    <form action="" method="post">
+    <form action="" method="post" class="form-cari">
 
     <input type="text" name="keyword" size="30" autofocus placeholder="Masukkan Keyword Pencarian.." autocomplete="off" id="keyword">
     <button type="submit" name="cari" id="tombol-cari">Cari!</button>
@@ -50,7 +50,7 @@ if( isset($_POST["cari"]) ) {
 
     <tr>
         <th>No.</th>
-        <th>Aksi</th>
+        <th class="aksi">Aksi</th>
         <th>Gambar</th>
         <th>NRP</th>
         <th>Nama</th>
@@ -62,7 +62,7 @@ if( isset($_POST["cari"]) ) {
     <?php foreach( $mahasiswa as $row ) : ?>
     <tr>
         <td><?= $i; ?></td>
-        <td>
+        <td class="aksi">
             <a href="ubah.php?id=<?= $row["id"]; ?>">Ubah</a>
             <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin');">Hapus</a>
         </td>
