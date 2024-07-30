@@ -21,14 +21,14 @@ if( isset($_POST["cari"]) ) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
    
     
 </head>
 
 <body>
 
-    <a href="logout.php" class="logout">Logut</a> | <a href="cetak.php">Cetak</a>
+    <a href="logout.php" class="logout">Logut</a> | <a href="cetak.php" target="_blank">Cetak</a>
 
     <h1>Daftar Mahasiswa</h1>
 

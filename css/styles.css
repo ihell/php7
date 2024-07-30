@@ -12,3 +12,11 @@
         display: none;
     }
 }
+
+body {
+    font-family: arial;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
