@@ -43,5 +43,5 @@ $html .= '</table>
 </html>';
 
 $mpdf->WriteHTML($html);
-$mpdf->Output('daftar-mahasiswa', 'D');
+$mpdf->Output('daftar-mahasiswa', 'I');
 ?>
